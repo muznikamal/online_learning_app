@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_learning_app/api_page.dart';
 
 class firstPage extends StatefulWidget {
   const firstPage({super.key});
@@ -159,103 +160,103 @@ class _firstPageState extends State<firstPage> {
                     ],
                   ),
 
-                  //component 1
                   SizedBox(
                     height: 15,
                   ),
 
-                  // GestureDetector(
-                  //   onTap: fungsiDitekan,
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                            spreadRadius: 1,
-                            blurRadius: 1,
-                            color: Colors.black12,
-                            offset: Offset(0, 2)),
-                      ],
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 75,
-                            height: 75,
-                            decoration: BoxDecoration(
-                              color: Colors.grey,
-                              borderRadius: BorderRadius.circular(15),
+                  Center(
+                    child: GestureDetector(
+                      onTap: fungsiditekan,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                                spreadRadius: 1,
+                                blurRadius: 1,
+                                color: Colors.black12,
+                                offset: Offset(0, 2)),
+                          ],
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 75,
+                              height: 75,
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
                             ),
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Product Design v1.0",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20,
+                            SizedBox(
+                              width: 15,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Product Design v1.0",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 20,
+                                  ),
                                 ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.person,
-                                    color: Colors.grey,
-                                    size: 20,
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    "Robertson Connie",
-                                    style: TextStyle(
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.person,
                                       color: Colors.grey,
-                                      fontSize: 17,
+                                      size: 20,
                                     ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    "\$190",
-                                    style: TextStyle(
-                                        color: Colors.blue,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  SizedBox(
-                                    width: 15,
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                        color: Color.fromARGB(74, 211, 80, 70),
-                                        borderRadius:
-                                            BorderRadius.circular(50)),
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 0, horizontal: 10),
-                                      child: Text(
-                                        "16 hours",
-                                        style: TextStyle(
-                                          color: Colors.red,
-                                          fontSize: 15,
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      "Robertson Connie",
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 17,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      "\$190",
+                                      style: TextStyle(
+                                          color: Colors.blue,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(
+                                      width: 15,
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          color:
+                                              Color.fromARGB(74, 211, 80, 70),
+                                          borderRadius:
+                                              BorderRadius.circular(50)),
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 0, horizontal: 10),
+                                        child: Text(
+                                          "16 hours",
+                                          style: TextStyle(
+                                            color: Colors.red,
+                                            fontSize: 15,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                ],
-                              )
-                            ],
-                          )
-                        ],
+                                  ],
+                                )
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -546,12 +547,12 @@ class _firstPageState extends State<firstPage> {
           ),
         ],
       ),
-
-      // //void fungsiDitekan() {
-      //  // Navigator.of(context).push(
-      //     MaterialPageRoute(builder: (context) {
-      //       return second_page();
-      // }),
     );
+  }
+
+  void fungsiditekan() {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+      return apiPage();
+    }));
   }
 }
